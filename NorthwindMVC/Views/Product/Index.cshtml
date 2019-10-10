@@ -1,0 +1,89 @@
+﻿@model IEnumerable<NorthwindLibrary.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityPerUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsOnOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReorderLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discontinued)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.ProductID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.SupplierID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.QuantityPerUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.UnitsInStock)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.UnitsOnOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ReorderLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Discontinued)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
