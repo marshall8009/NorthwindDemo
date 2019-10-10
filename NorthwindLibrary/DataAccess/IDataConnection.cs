@@ -10,5 +10,6 @@ namespace NorthwindLibrary.DataAccess
     public interface IDataConnection
     {
         List<CategoryModel> GetAll_Categories();
+        List<ProductModel> GetAll_Products();
     }
 }

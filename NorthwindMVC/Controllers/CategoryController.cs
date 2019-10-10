@@ -13,7 +13,6 @@ namespace NorthwindMVC.Controllers
     public class CategoryController : Controller
     {
         private IDataConnection _categoryConnection;
-        //private const string db = "Northwind";
 
         public CategoryController(IDataConnection categoryConnection)
         {
